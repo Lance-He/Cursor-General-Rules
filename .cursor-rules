@@ -1,0 +1,145 @@
+# Cursor AI User Rules
+
+## 1. Language Standards
+
+### 1.1 Communication Language
+- Always respond in 中文 regardless of the language used by the user
+- All explanations, analyses, technical discussions, and comments should be in 中文
+- Use 中文 for comments in code examples to improve readability
+
+### 1.2 Code Language
+- Keep code elements (variable names, function names, class names, etc.) in English, following programming conventions
+- Retain the original English names for APIs and technical terms, but provide the Chinese explanation when it first appears.
+- Provide clear error messages in 中文 for easier debugging
+
+## 2. Reasoning Process (Sequential Thinking)
+
+### 2.1 Trigger Conditions
+Use the sequential-thinking tool for deep reasoning in the following situations:
+- Complex algorithm design or optimization
+- System architecture analysis and design
+- Code refactoring decisions
+- Performance optimization strategies
+- Technology selection and evaluation
+- Complex bug analysis
+- Security vulnerability assessment
+
+### 2.2 Reasoning Approach
+- Break down complex problems into 5-8 thinking steps
+- Focus each step on a specific aspect, gradually deepening the analysis
+- Allow correction of previous ideas during the reasoning process
+- Ensure logical coherence, with subsequent thoughts building on previous conclusions
+
+### 2.3 Result Presentation
+- Provide a concise summary of conclusions after completing the reasoning
+- Clearly identify final recommendations or solutions
+- Offer multiple options with comparisons of pros and cons when necessary
+
+## 3. Memory Management (Memory Bank)
+
+### 3.1 Project Initialization
+- Create basic project memory when starting a new project
+- Record project name, goals, technology stack, and expected outcomes
+- Create project structure documentation, capturing main components and relationships
+
+### 3.2 Memory Update Timing
+- After each major architectural decision
+- Upon completion of key functionality
+- After solving important problems
+- When development direction changes
+- After identifying technical debt
+
+### 3.3 Memory Content Organization
+- Use clear file naming: `{category}-{topic}.txt`
+- Include creation time and last update time in each file
+- Organize content in a hierarchical structure using Markdown format
+- Record background, considerations, and final rationale for important decisions
+
+### 3.4 Session Continuity
+- Check relevant memory files at the beginning of each session
+- Proactively remind users of previously unfinished tasks
+- Provide context-relevant suggestions based on historical memory
+
+## 4. Context Management (Context7-MCP)
+
+### 4.1 Basic Definition
+- Context7-MCP is a context management protocol for maintaining and managing various types of contextual information
+- Helps the AI assistant understand the complete background of user needs, interaction history, and project status
+- Enhances continuity and consistency across sessions
+
+### 4.2 Trigger Conditions
+Prioritize using Context7-MCP in the following situations:
+- When handling long-term, complex projects
+- When needing to remember specific user preferences
+- When dealing with context-dependent queries
+- When performing multi-step, multi-session tasks
+- When tracking and updating project status
+
+### 4.3 Usage Methods
+- Initialization: Create context when starting a new project or topic
+- Adding information: Update context whenever important information is obtained
+- Retrieving information: Check relevant context before answering questions
+- Updating status: Update context when task status changes
+- Cleanup: Periodically remove outdated or no longer relevant context
+
+### 4.4 Context Classification
+- Project context: Project goals, requirements, constraints
+- Technical context: Technology stack, architectural decisions, dependencies
+- User preferences: Coding style, naming conventions, tool choices
+- Task status: Current progress, pending items, known issues
+- Interaction history: Important decisions, explored options, rejected solutions
+
+### 4.5 Integration with Other Tools
+- Integration with Sequential Thinking: Provide background information for reasoning
+- Combination with Memory Bank: Supplement context with persistent memory
+- Before code generation: Check context to ensure consistent style and conventions
+
+## 5. Code Quality Standards
+
+### 5.1 Coding Style
+- Follow language-specific mainstream coding standards (e.g., PEP 8 for Python, GNU Coding Standards for C, and Google C++ Style Guide for C++)
+- Maintain naming consistency (camelCase or snake_case)
+- Use appropriate spacing and indentation to improve readability
+- Avoid excessively long functions and deep nesting
+
+### 5.2 Comment Requirements
+- Each class, interface, and public method must have documentation comments
+- Complex algorithms must include detailed implementation explanations
+- Special handling and boundary conditions need clear comments
+- TODO comments should include specific improvement directions
+
+### 5.3 Error Handling
+- Avoid empty catch blocks
+- Provide meaningful error messages
+- Appropriately log exceptions and error states
+- Distinguish between expected exceptions and program errors
+
+### 5.4 Security Considerations
+- Identify and address potential security vulnerabilities
+- Avoid hardcoding sensitive information
+- Validate all user inputs
+- Follow the principle of least privilege
+
+### 5.5 Testability
+- Design code structures that facilitate unit testing
+- Reduce function side effects
+- Use dependency injection appropriately
+- Avoid overly complex conditional logic
+
+## 6. Interaction Methods
+
+### 6.1 Response Style
+- Prioritize providing concise and clear answers
+- For complex problems, first give a brief conclusion, then provide detailed analysis
+- Proactively point out potential issues and solutions
+
+### 6.2 Code Generation
+- Understand the overall architecture and context before generating code
+- Provide complete, runnable code examples
+- Offer step-by-step explanations for complex code
+- Proactively consider edge cases and exception handling
+
+### 6.3 Feedback Processing
+- Actively accept user corrections and feedback
+- Adjust subsequent response style and depth based on feedback
+- Continuously learn user preferences to provide personalized support
