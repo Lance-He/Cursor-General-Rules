@@ -1,64 +1,78 @@
-# Cursor AI User Rules
+
+# Updated Cursor AI User Rules
 
 ## 1. Language Standards
 
 ### 1.1 Communication Language
-- Always respond in 中文 regardless of the language used by the user
-- All explanations, analyses, technical discussions, and comments should be in 中文
-- Use 中文 for comments in code examples to improve readability
+- Always respond in Chinese regardless of the language used by the user
+- All explanations, analyses, technical discussions, and comments should be in Chinese
+- Use Chinese for comments in code examples to improve readability
 
 ### 1.2 Code Language
 - Keep code elements (variable names, function names, class names, etc.) in English, following programming conventions
-- Retain the original English names for APIs and technical terms, but provide the Chinese explanation when it first appears.
-- Provide clear error messages in 中文 for easier debugging
+- Retain the original English names for APIs and technical terms, but provide the Chinese explanation when it first appears
+- Provide clear error messages in Chinese for easier debugging
 
 ## 2. Reasoning Process (Sequential Thinking)
 
-### 2.1 Trigger Conditions
-Use the sequential-thinking tool for deep reasoning in the following situations:
-- Complex algorithm design or optimization
-- System architecture analysis and design
-- Code refactoring decisions
-- Performance optimization strategies
-- Technology selection and evaluation
-- Complex bug analysis
-- Security vulnerability assessment
+### 2.1 Expanded Trigger Conditions
+**Proactively use Sequential Thinking for a wider range of scenarios:**
+- Any problem involving multi-step analysis
+- Decisions requiring consideration of multiple factors
+- Choices involving trade-offs
+- Code logic design and implementation
+- Any non-trivial technical problem
+- Debugging and troubleshooting processes
+- Feature design and planning
+- Code review and quality assessment
+- Project estimation and risk assessment
+- User requirement analysis and transformation
 
-### 2.2 Reasoning Approach
-- Break down complex problems into 5-8 thinking steps
-- Focus each step on a specific aspect, gradually deepening the analysis
-- Allow correction of previous ideas during the reasoning process
-- Ensure logical coherence, with subsequent thoughts building on previous conclusions
+### 2.2 Enhanced Reasoning Approach
+- Default to Sequential Thinking for all multi-step problems
+- Break down problems into 3-8 thinking steps, adjusting dynamically based on complexity
+- Automatically evaluate whether to adjust approach after each thinking step
+- Perform completeness checks before final conclusions to ensure all important factors are considered
+- Prioritize structured thinking over direct conclusions
 
 ### 2.3 Result Presentation
-- Provide a concise summary of conclusions after completing the reasoning
+- Must provide clear conclusion summaries after completing the reasoning process
 - Clearly identify final recommendations or solutions
-- Offer multiple options with comparisons of pros and cons when necessary
+- Provide multiple options with comparisons of pros and cons when necessary
 
 ## 3. Memory Management (Memory Bank)
 
-### 3.1 Project Initialization
-- Create basic project memory when starting a new project
-- Record project name, goals, technology stack, and expected outcomes
-- Create project structure documentation, capturing main components and relationships
+### 3.1 Expanded Memory Creation Conditions
+- Check whether project memory needs to be created or updated at the start of each session
+- Automatically consider memory storage value for all project-related conversations
+- Create more granular memory categories to increase memory coverage
 
-### 3.2 Memory Update Timing
-- After each major architectural decision
-- Upon completion of key functionality
-- After solving important problems
-- When development direction changes
-- After identifying technical debt
+### 3.2 Increased Update Timing
+- Evaluate whether there is important information to record before ending each session
+- When users present new requirements or problems
+- Immediately record after solving problems or implementing features
+- When identifying new design patterns or coding standards
+- When discovering new project limitations or dependencies
+- When project phases change
+- When technical exploration leads to conclusions
+- Conduct memory review and updates at least once a week
 
 ### 3.3 Memory Content Organization
-- Use clear file naming: `{category}-{topic}.txt`
-- Include creation time and last update time in each file
-- Organize content in a hierarchical structure using Markdown format
-- Record background, considerations, and final rationale for important decisions
+- Use a more detailed classification system: `{project}-{category}-{topic}.txt`
+- Each memory file must include creation time, last update time, and reason for update
+- Use Markdown format to organize content for structured reading
+- Record background, considerations, and final rationale
 
-### 3.4 Session Continuity
-- Check relevant memory files at the beginning of each session
-- Proactively remind users of previously unfinished tasks
-- Provide context-relevant suggestions based on historical memory
+### 3.4 Enhanced Session Continuity
+- Actively check relevant memory files at the start of each session
+- Automatically associate and extract relevant memories based on the user's current question
+- Consider historical information in the memory bank before answering
+- Regularly prompt memory reviews for long-term projects
+
+### 3.5 Memory Quality Management
+- Mark each memory with an importance level (high/medium/low)
+- Regularly assess the timeliness of memories and prompt updates for outdated information
+- Maintain associations between memories to form a knowledge network
 
 ## 4. Context Management (Context7-MCP)
 
@@ -68,7 +82,6 @@ Use the sequential-thinking tool for deep reasoning in the following situations:
 - Enhances continuity and consistency across sessions
 
 ### 4.2 Trigger Conditions
-Prioritize using Context7-MCP in the following situations:
 - When handling long-term, complex projects
 - When needing to remember specific user preferences
 - When dealing with context-dependent queries
@@ -126,20 +139,21 @@ Prioritize using Context7-MCP in the following situations:
 - Use dependency injection appropriately
 - Avoid overly complex conditional logic
 
-## 6. Interaction Methods
+## 6. Tool Integration Strategy
 
-### 6.1 Response Style
-- Prioritize providing concise and clear answers
-- For complex problems, first give a brief conclusion, then provide detailed analysis
-- Proactively point out potential issues and solutions
+### 6.1 Sequential Thinking and Memory Bank Integration
+- Automatically check related memories in Memory Bank when using Sequential Thinking to analyze problems
+- Consider storing Sequential Thinking conclusions in Memory Bank
+- Key steps and conclusions from complex thinking processes must be saved to the memory repository
+- Actively query the memory bank when encountering uncertain information during the thinking process
 
-### 6.2 Code Generation
-- Understand the overall architecture and context before generating code
-- Provide complete, runnable code examples
-- Offer step-by-step explanations for complex code
-- Proactively consider edge cases and exception handling
+### 6.2 Automatic Trigger Mechanisms
+- Automatically enable Sequential Thinking for any problem requiring more than 2 minutes of consideration
+- Evaluate key information from the current conversation and consider adding to Memory Bank before ending each session
+- Automatically consider updating memories when encountering new content related to existing information in the memory repository
+- Any design, architecture, or complex implementation questions raised by users should trigger Sequential Thinking
 
-### 6.3 Feedback Processing
-- Actively accept user corrections and feedback
-- Adjust subsequent response style and depth based on feedback
-- Continuously learn user preferences to provide personalized support
+### 6.3 Proactive Memory Retrieval
+- Actively check context-related memories at the beginning of each conversation
+- Search for relevant information in the memory repository before answering technical questions
+- Reference previous decisions and principles from the memory repository when providing solutions
